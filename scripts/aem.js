@@ -128,6 +128,7 @@ function sampleRUM(checkpoint, data = {}) {
   }
 }
 
+
 /**
  * Setup block utils.
  */
@@ -154,6 +155,38 @@ function setup() {
 
 function init() {
   setup();
+  const apiUrl = 'http://localhost:8089/actions-service/v1/actions/getUser/raman_zanwar@persistent.com';
+  console.log(apiUrl);
+  const resp=console.log(apiUrl);
+  console.log(resp);
+  //fetch(apiUrl,)
+  //console.log(response);
+
+// Make a GET request
+fetch(apiUrl,{mode:'no-cors'})
+  .then(response => {
+    
+
+  console.log("response= "+ response);
+  // JSON.parse(response);
+  console.log(JSON.stringify(response));
+    
+    const u1=response.toUpperCase;
+    console.log(u1);
+    alert(response.user_Id);
+    //console.log(response.json());
+    
+if (!response.ok) {
+throw new Error('Network response was not ok');
+}
+return response.json();
+})
+.then(data => {
+console.log(data);
+})
+.catch(error => {
+console.error('Error:', error);
+});
   sampleRUM('top');
 
   window.addEventListener('load', () => sampleRUM('load'));

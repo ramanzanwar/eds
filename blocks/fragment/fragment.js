@@ -12,6 +12,10 @@ import {
   loadBlocks,
 } from '../../scripts/aem.js';
 
+import {
+  block
+} from '../blck/blck.js';
+
 /**
  * Loads a fragment.
  * @param {string} path The path to the fragment
