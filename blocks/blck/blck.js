@@ -1,6 +1,6 @@
 export default function decorate(block){
 
-    const apiUrl = '/title';
+    const apiUrl = 'http://localhost:8089/actions-service/v1/actions/getUsers';
 
 // Make a GET request
 fetch(apiUrl)
