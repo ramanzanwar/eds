@@ -4,6 +4,8 @@ export default function decorate(block){
   alert('Button clicked!');
 }
 
+    const footerMeta = getMetadata('blck');
+  block.textContent = '';
     // 1. Create the button
 var button = document.createElement("button");
 button.innerHTML = "Do Something";
