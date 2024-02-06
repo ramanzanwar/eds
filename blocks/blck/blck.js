@@ -1,6 +1,7 @@
 export default function decorate(block){
 
-    <button onclick="fetch()">Click me</button>
+    const button = document.createElement('button')
+        button.innerText = 'Can you click me?'
     const apiUrl = 'http://localhost:8089/actions-service/v1/actions/getUsers';
 
 // Make a GET request
