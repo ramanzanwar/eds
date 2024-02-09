@@ -41,6 +41,7 @@
   --nav-height: 64px;
 }
 
+body {background-color: coral;}
 @font-face {
   font-family: roboto-fallback;
   size-adjust: 100.06%;
