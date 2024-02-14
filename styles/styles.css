@@ -60,6 +60,10 @@ body {background-color: coral;}
   }
 }
 
+.blck{
+  background-color:orange
+}
+
 body {
   font-size: var(--body-font-size-m);
   margin: 0;
