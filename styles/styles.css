@@ -64,13 +64,13 @@ body {background-color: coral;}
   background-color:orange
 }
 
-body {
+body{
   font-size: var(--body-font-size-m);
   margin: 0;
   font-family: var(--body-font-family);
   line-height: 1.6;
   color: var(--text-color);
-  background-color: black;
+  background-color: white;
   display: none;
 }
 
