@@ -16,7 +16,16 @@
 // Make a GET request
 fetch(apiUrl)
 .then(response => {
-    var tableContent = document.querySelector('#output1 > tbody');
+   
+    
+if (!response.ok) {
+throw new Error('Network response was not ok');
+}
+return response.json();
+})
+.then(data => {
+    console.log(data)
+     var tableContent = document.querySelector('#output1 > tbody');
         data.map(function(instance) {
             const row = document.createElement('tr');
             tableContent.appendChild(row);
@@ -26,14 +35,6 @@ fetch(apiUrl)
                 row.appendChild(cell);
             });
         });
-    
-if (!response.ok) {
-throw new Error('Network response was not ok');
-}
-return response.json();
-})
-.then(data => {
-    console.log(data)
    
 })
 .catch(error => {
