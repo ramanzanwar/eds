@@ -26,7 +26,7 @@ return response.json();
 .then(data => {
     console.log(data)
      var tableContent = document.querySelector('#output1 > tbody');
-        data.map(function(instance) {
+        data.Array.map(function(instance) {
             const row = document.createElement('tr');
             tableContent.appendChild(row);
             instance.map(function(info) {
@@ -48,8 +48,8 @@ console.error('Error:', error);
     <table class="table" id="output1">
         <thead>
             <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Vorname</th>
+                <th scope="col">user_Id</th>
+                <th scope="col">username</th>
                 <th scope="col">Nachname</th>
             </tr>
         </thead>
