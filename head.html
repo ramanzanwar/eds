@@ -3,4 +3,12 @@
 <script src="/scripts/scripts.js" type="module"></script>
 <link rel="stylesheet" href="/styles/styles.css"/>
 <h1> Welcome to AEM Franklin</h1>
-<button onclick="onButtonClick()">Click menu</button>
+<body>
+    <script>
+      function changeColor() {
+         document.getElementById("my-div").style.backgroundColor = "green";
+      }
+    </script>
+    <button onclick="changeColor()">Change color</button>
+    <div id="my-div"></div>
+  </body>
