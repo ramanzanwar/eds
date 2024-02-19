@@ -5,8 +5,8 @@
 <h1> Welcome to AEM Franklin</h1>
 <body>
     <script>
+
       function changeColor() {
-         document.getElementById("my-div").style.backgroundColor = "green";
          alert('Button clicked!');
       
     const apiUrl = 'http://localhost:8089/actions-service/v1/actions/getUsers';
@@ -16,19 +16,45 @@
 // Make a GET request
 fetch(apiUrl)
 .then(response => {
+    var tableContent = document.querySelector('#output1 > tbody');
+        data.map(function(instance) {
+            const row = document.createElement('tr');
+            tableContent.appendChild(row);
+            instance.map(function(info) {
+                const cell = document.createElement('td');
+                cell.innerText = info;
+                row.appendChild(cell);
+            });
+        });
+    
 if (!response.ok) {
 throw new Error('Network response was not ok');
 }
 return response.json();
 })
 .then(data => {
-console.log(data);
+    console.log(data)
+   
 })
 .catch(error => {
 console.error('Error:', error);
 });
-      }
+
+}      
     </script>
     <button onclick="changeColor()">Change color</button>
     <div id="my-div"></div>
+    <table class="table" id="output1">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Vorname</th>
+                <th scope="col">Nachname</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+
+    </table>
   </body>
