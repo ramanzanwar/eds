@@ -2,7 +2,7 @@ export default function decorate(block){
 
     function onButtonClick() {
         alert('Button clicked!');
-      }
+      
     const apiUrl = 'http://localhost:8089/actions-service/v1/actions/getUsers';
 
 
@@ -21,5 +21,5 @@ console.log(data);
 .catch(error => {
 console.error('Error:', error);
 });
-
+    }
 }
