@@ -18,6 +18,7 @@ const axios = require('axios');
 const util = require('util'); 
 const qs = require('qs');
 var jwt = require('jsonwebtoken');
+window.location.href = "/index.html";
 
 // base client lib with interceptors for requests to add logging.
 class IMSJWTTokenExchange {
