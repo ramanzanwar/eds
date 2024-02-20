@@ -12,9 +12,6 @@ import {
   loadBlocks,
 } from '../../scripts/aem.js';
 
-import {
-  block
-} from '../blck/blck.js';
 
 /**
  * Loads a fragment.

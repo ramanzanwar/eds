@@ -2,4 +2,47 @@
 <script src="/scripts/aem.js" type="module"></script>
 <script src="/scripts/scripts.js" type="module"></script>
 <link rel="stylesheet" href="/styles/styles.css"/>
-<h1> Welcome to AEM Franklin Page</h1>
+<h1> Welcome to AEM Franklin</h1>
+<body>
+    <script>
+
+      function changeColor() {
+         alert('Button clicked!');
+      
+    const apiUrl = 'http://localhost:8089/actions-service/v1/actions/getUsers';
+
+
+
+// Make a GET request
+fetch(apiUrl)
+.then(response => {
+    
+if (!response.ok) {
+throw new Error('Network response was not ok');
+}
+return response.json();
+})
+.then(data => {
+    console.log(data)
+   
+})
+.catch(error => {
+console.error('Error:', error);
+});
+
+}      
+    </script>
+    <button onclick="changeColor()">Change color</button>
+    <div id="my-div"></div>
+    <table class="table" id="output1">
+        <thead>
+            <tr>
+                <th scope="col">user_Id</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+
+    </table>
+  </body>

@@ -13,7 +13,7 @@ button.innerHTML = "Do Something";
 
 
   // fetch footer content
-  const footerPath1 = cfg.footer || '/footer';
+  const footerPath = cfg.footer || '/footer';
   const resp = await fetch(`${footerPath}.plain.html`, window.location.pathname.endsWith('/footer') ? { cache: 'reload' } : {});
 
 // 2. Append somewhere
@@ -25,8 +25,8 @@ button.addEventListener ("click", function() {
   alert("did something");
 });
   // load footer fragment
-  const footerPath = footerMeta.footer || '/footer';
-  const fragment = await loadFragment(footerPath);
+  // const footerPath1 = footerMeta.footer || '/footer';
+  // const fragment = await loadFragment(footerPath);
 
 
   if (resp.ok) {

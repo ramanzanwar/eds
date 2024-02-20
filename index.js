@@ -134,6 +134,7 @@ class IMSJWTTokenExchange {
         if ( options.publicKey ) {
             console.debug(jwt.verify(jwt_token, options.publicKey,{ complete: true}));
         }
+        
 
 
         var body = qs.stringify({
@@ -152,30 +153,46 @@ class IMSJWTTokenExchange {
         throw Error("Failed to exchange jwt.")
 
     }
-
 }
-function onButtonClick() {
-    alert('Button clicked!');
+// Declarations for the Artwork
+let art;
+let showArtInfo;
+
+//  The Art Institute of Chicago request - No user login needed because it's 
+//free... I think...
+
+
+// Function to get Art Info when image figure is clicked
+/**
+ * @param art_index
+ * @param info_index
+ * 
+ * The function gets art information from The Art Institute of Chicago using 
+ the art_index of our gallery.
+ * Then finds the correct info_index inside of the JSON response data from 
+ The Art Institute
+ * of Chicago which will produce a description that will be shown when you 
+ click the art.
+ */
+
+async function clickedEvent() {
+    //  Get Art Id
   
-const apiUrl = 'http://localhost:8089/actions-service/v1/actions/getUsers';
+    let headers = new Headers([
+      ['Content-Type', 'application/json'],
+      ['Accept', 'application/json']
+    ]);
+  
+    let request = new Request(`http://localhost:8089/actions-service/v1/actions/getUsers`, {
+      method: 'GET',
+      headers: headers
+    });
+    let result = await fetch(request);
+    let response = await result.json();
+    console.log(response);
 
-
-
-// Make a GET request
-fetch(apiUrl)
-.then(response => {
-if (!response.ok) {
-throw new Error('Network response was not ok');
 }
-return response.json();
-})
-.then(data => {
-console.log(data);
-})
-.catch(error => {
-console.error('Error:', error);
-});
-}
+
 var assertPresent = (config, path, missing) => {
     const pathElements = path.split(".");
     var c = config;
