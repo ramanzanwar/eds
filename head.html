@@ -1,29 +1,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <script src="/scripts/aem.js" type="module"></script>
 <script src="/scripts/scripts.js" type="module"></script>
+<script src="/blocks/blck/blck.js" type="module"></script>
 <link rel="stylesheet" href="/styles/styles.css"/>
 <h1> Welcome to AEM Franklin</h1>
 <body>
-    <script>
-        const newData = [
-  ["Alice", 30, "New York"],
-  ["Bob", 25, "London"],
-  // ... more data
-];
+    
+    <button onclick="onButtonClick()">Change color</button>
 
-const tableBody = document.getElementById("data-body");
-
-for (const row of newData) {
-  const tableRow = document.createElement("tr");
-  for (const cellData of row) {
-    const cell = document.createElement("td");
-    cell.textContent = cellData;
-    tableRow.appendChild(cell);
-  }
-  tableBody.appendChild(tableRow);
-}
-    </script>
-    <button onclick="changeColor()">Change color</button>
     <div id="my-div"></div>
     <table id="my-table">
         <thead>

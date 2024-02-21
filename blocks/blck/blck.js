@@ -21,7 +21,27 @@ console.log(data);
 .catch(error => {
 console.error('Error:', error);
 });
+console.log(data);
     }
+    
+        const newData = [
+  ["Alice", 30, "New York"],
+  ["Bob", 25, "London"],
+  // ... more data
+];
+
+const tableBody = document.getElementById("data-body");
+
+for (const row of newData) {
+  const tableRow = document.createElement("tr");
+  for (const cellData of row) {
+    const cell = document.createElement("td");
+    cell.textContent = cellData;
+    tableRow.appendChild(cell);
+  }
+  tableBody.appendChild(tableRow);
+}
+   
 
     
  
