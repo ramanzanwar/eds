@@ -5,44 +5,34 @@
 <h1> Welcome to AEM Franklin</h1>
 <body>
     <script>
+        const newData = [
+  ["Alice", 30, "New York"],
+  ["Bob", 25, "London"],
+  // ... more data
+];
 
-      function changeColor() {
-         alert('Button clicked!');
-      
-    const apiUrl = 'http://localhost:8089/actions-service/v1/actions/getUsers';
+const tableBody = document.getElementById("data-body");
 
-
-
-// Make a GET request
-fetch(apiUrl)
-.then(response => {
-    
-if (!response.ok) {
-throw new Error('Network response was not ok');
+for (const row of newData) {
+  const tableRow = document.createElement("tr");
+  for (const cellData of row) {
+    const cell = document.createElement("td");
+    cell.textContent = cellData;
+    tableRow.appendChild(cell);
+  }
+  tableBody.appendChild(tableRow);
 }
-return response.json();
-})
-.then(data => {
-    console.log(data)
-   
-})
-.catch(error => {
-console.error('Error:', error);
-});
-
-}      
     </script>
     <button onclick="changeColor()">Change color</button>
     <div id="my-div"></div>
-    <table class="table" id="output1">
+    <table id="my-table">
         <thead>
-            <tr>
-                <th scope="col">user_Id</th>
-            </tr>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+          </tr>
         </thead>
-        <tbody>
-
-        </tbody>
-
-    </table>
+        <tbody id="data-body"></tbody>
+      </table>
   </body>
