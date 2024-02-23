@@ -250,6 +250,12 @@ main .yellow{
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: red;
   color: white;
+}
+
+.topnav a.ac {
+  background-color: red;
+  color: white;
+  text-align: right;
 }
