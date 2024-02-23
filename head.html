@@ -12,7 +12,7 @@ function onButtonClick() {
   
 const apiUrl = 'http://localhost:8089/actions-service/v1/actions/getUsers';
 
-const newData=[];
+// const newData=[];
 
 // Make a GET request
 fetch('https://jsonplaceholder.typicode.com/posts/1')
@@ -28,11 +28,7 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
    console.error('Error fetching API data:', error);
  });    
 
-//     const newData = [
-// ["Alice", 30, "New York"],
-// ["Bob", 25, "London"],
-// // ... more data
-// ];
+
 
 const tableBody = document.getElementById("data-body");
 
@@ -47,7 +43,7 @@ tableBody.appendChild(tableRow);
 }
 }</script>
    <div id="my-div"></div>
-    <table id="my-table">
+    <!-- <table id="my-table">
         <thead>
           <tr>
             <th>Name</th>
@@ -56,5 +52,5 @@ tableBody.appendChild(tableRow);
           </tr>
         </thead>
         <tbody id="data-body"></tbody>
-      </table>
+      </table> -->
   </body>

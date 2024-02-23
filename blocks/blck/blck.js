@@ -6,43 +6,41 @@ export default function decorate(block){
     const apiUrl = 'https://jsonplaceholder.typicode.com/posts/1';
     const data=[];
 
-    // const newData = [
-    //     ["Alice", 30, "New York"],
-    //     ["Bob", 25, "London"],
-    //     ["asa",24234,"fasf"],
-    //   ];
+    const newData = [
+       
+      ];
 
 // Make a GET request
 // Initialize an empty array to store API responses
 
 // Example API call using fetch
-// fetch('https://jsonplaceholder.typicode.com/posts/1')
-//  .then(response => response.json())
-//  .then(data => {
-//    // Assuming the API response is an array of objects
-//    // Push each response object into the apiResponses array
-//    newData.push(data);
-//    console.log('New  data:', newData);
-//  })
-//  .catch(error => {
-//    console.error('Error fetching API data:', error);
-//  });
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+ .then(response => response.json())
+ .then(data => {
+   // Assuming the API response is an array of objects
+   // Push each response object into the apiResponses array
+   newData.push(data);
+   console.log('New  data:', newData);
+ })
+ .catch(error => {
+   console.error('Error fetching API data:', error);
+ });
 
     
     
         
 
-// const tableBody = document.getElementById("data-body");
+const tableBody = document.getElementById("data-body");
 
-// for (const row of newData) {
-//   const tableRow = document.createElement("tr");
-//   for (const cellData of row) {
-//     const cell = document.createElement("td");
-//     cell.textContent = cellData;
-//     tableRow.appendChild(cell);
-//   }
-//   tableBody.appendChild(tableRow);
-// }
+for (const row of newData) {
+  const tableRow = document.createElement("tr");
+  for (const cellData of row) {
+    const cell = document.createElement("td");
+    cell.textContent = cellData;
+    tableRow.appendChild(cell);
+  }
+  tableBody.appendChild(tableRow);
+}
 
 
 
