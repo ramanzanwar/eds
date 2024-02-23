@@ -197,7 +197,7 @@ main img {
 
 /* sections */
 main .section {
-  padding: 64px 16px;
+  padding: 100px 16px;
 }
 
 @media (width >= 600px) {
@@ -217,4 +217,9 @@ main .section {
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
+  align-items: center;
+}
+
+main .yellow{
+  align-items: center;
 }
