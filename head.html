@@ -23,7 +23,7 @@ function onButtonClick() {
   
 const apiUrl = 'http://localhost:8089/actions-service/v1/actions/getUsers';
 
-const newData=[];
+const newData=['Hello',29,'New'];
 
 // Make a GET request
 fetch(apiUrl)
@@ -34,13 +34,13 @@ fetch(apiUrl)
    console.log('Hello',data);
   //  console.log(data);
    newData.push(data);
-   console.log('New  data:', newData);
+   //console.log('New  data:', newData);
  })
  .catch(error => {
    console.error('Error fetching API data:', error);
  });    
 
-
+ console.log('New  data:', newData);
 
 const tableBody = document.getElementById("data-body");
 
