@@ -23,7 +23,7 @@ function onButtonClick() {
   
 const apiUrl = 'http://localhost:8089/actions-service/v1/actions/getUsers';
 
-var newData=[];
+var newData;
 
 // Make a GET request
 fetch(apiUrl)
@@ -33,7 +33,8 @@ fetch(apiUrl)
    // Push each response object into the apiResponses array
    console.log('Hello',data);
   //  console.log(data);
-   newData.push(data);
+  //  newData.push(data);
+  newData=data;
    //console.log('New  data:', newData);
  })
  .catch(error => {
