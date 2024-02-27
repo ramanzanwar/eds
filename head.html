@@ -23,7 +23,7 @@ function onButtonClick() {
   
 const apiUrl = 'http://localhost:8089/actions-service/v1/actions/getUsers';
 
-// const newData=[];
+const newData=[];
 
 // Make a GET request
 fetch(apiUrl)
@@ -31,7 +31,8 @@ fetch(apiUrl)
  .then(data => {
    // Assuming the API response is an array of objects
    // Push each response object into the apiResponses array
-   console.log('Hello');
+   console.log('Hello',data);
+  //  console.log(data);
    newData.push(data);
    console.log('New  data:', newData);
  })
@@ -54,7 +55,7 @@ tableBody.appendChild(tableRow);
 }
 }</script>
    <div id="my-div"></div>
-    <!-- <table id="my-table">
+    <table id="my-table">
         <thead>
           <tr>
             <th>Name</th>
@@ -63,5 +64,5 @@ tableBody.appendChild(tableRow);
           </tr>
         </thead>
         <tbody id="data-body"></tbody>
-      </table> -->
+      </table>
   </body>
