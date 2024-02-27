@@ -23,7 +23,7 @@ function onButtonClick() {
   
 const apiUrl = 'http://localhost:8089/actions-service/v1/actions/getUsers';
 
-const newData=['Hello',29,'New'];
+var newData=[];
 
 // Make a GET request
 fetch(apiUrl)
@@ -34,17 +34,6 @@ fetch(apiUrl)
    console.log('Hello',data);
   //  console.log(data);
    newData.push(data);
-   const tableBody = document.getElementById("data-body");
-
-for (const row of newData) {
-const tableRow = document.createElement("tr");
-for (const cellData of row) {
-const cell = document.createElement("td");
-cell.textContent = cellData;
-tableRow.appendChild(cell);
-}
-tableBody.appendChild(tableRow);
-}
    //console.log('New  data:', newData);
  })
  .catch(error => {
