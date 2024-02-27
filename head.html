@@ -12,10 +12,13 @@
     <a class="ac">Sign In</a>
     <a>Sign Up</a>
   </div>
+
+  <button onclick="onButtonClick()">Hello</button>
 <body>
     
 <script>
 function onButtonClick() {
+
     alert('Button clicked!');
   
 const apiUrl = 'http://localhost:8089/actions-service/v1/actions/getUsers';
@@ -24,11 +27,12 @@ const apiUrl = 'http://localhost:8089/actions-service/v1/actions/getUsers';
 
 // Make a GET request
 fetch(apiUrl)
+console.log('Hi')
  .then(response => response.json())
  .then(data => {
    // Assuming the API response is an array of objects
    // Push each response object into the apiResponses array
-   console.log(data);
+   console.log('Hello');
    newData.push(data);
    console.log('New  data:', newData);
  })
