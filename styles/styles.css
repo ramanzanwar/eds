@@ -260,3 +260,7 @@ main .yellow{
   align-items: end;
   text-align: right;
 }
+
+.topnav-right {
+  float: right;
+}
